@@ -7,7 +7,6 @@ export default function Home() {
           Nous sommes une entreprise spécialisée dans la menuiserie et nous
           proposons des services de qualité pour répondre à vos besoins.
         </p>
-        <img src="/src/assets/img/accueil.jpg" alt="Accueil" />
       </div>
     </>
   );

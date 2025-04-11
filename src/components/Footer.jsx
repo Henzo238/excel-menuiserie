@@ -5,16 +5,19 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <>
-      <a href="https://www.facebook.com/ExcelMenuiseries#">
+    <footer>
+      <a href="https://www.facebook.com/ExcelMenuiseries#" target="_blank">
         <FontAwesomeIcon icon={faFacebook} />
       </a>
-      <a href="https://www.instagram.com/excel_menuiseries/">
+      <a href="https://www.instagram.com/excel_menuiseries/" target="_blank">
         <FontAwesomeIcon icon={faInstagram} />
       </a>
-      <a href="https://www.google.com/maps?cid=10784869451143381952">
+      <a
+        href="https://www.google.com/maps?cid=10784869451143381952"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faLocationDot} />
       </a>
-    </>
+    </footer>
   );
 }

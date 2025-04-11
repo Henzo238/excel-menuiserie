@@ -1,4 +1,5 @@
 @import "./base.css";
+
 html,
 body {
   height: 100%;
@@ -10,27 +11,25 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
-
 header {
   padding: 0.8em;
   text-align: center;
   font-size: 2em;
 }
-
 footer {
   margin-top: auto;
   background-color: #dfe1e3;
   padding: 0.8em;
   text-align: center;
   font-size: 2em;
-}
-footer a {
-  text-decoration: none;
-  color: #6e6f71;
-  margin: 2em;
-}
-footer a:hover {
-  color: #1a75bc;
+  a {
+    text-decoration: none;
+    color: #6e6f71;
+    margin: 2em;
+  }
+  a:hover {
+    color: #1a75bc;
+  }
 }
 
 .navbar {
@@ -38,12 +37,12 @@ footer a:hover {
   padding: 0.8em;
   text-align: center;
   font-size: 2em;
+  a {
+    text-decoration: none;
+    color: #6e6f71;
+    margin: 2em;
+  }
+  a:hover {
+    color: #1a75bc;
+  }
 }
-.navbar a {
-  text-decoration: none;
-  color: #6e6f71;
-  margin: 2em;
-}
-.navbar a:hover {
-  color: #1a75bc;
-}/*# sourceMappingURL=index.css.map */
