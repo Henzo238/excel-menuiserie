@@ -1,8 +1,10 @@
 @import "./base.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 #root {
@@ -12,9 +14,7 @@ body {
 }
 
 header {
-  padding: 0.8em;
   text-align: center;
-  font-size: 2em;
 }
 
 footer {
@@ -22,22 +22,34 @@ footer {
   background-color: #dfe1e3;
   padding: 0.8em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.2em;
 }
 footer a {
   text-decoration: none;
   color: #6e6f71;
   margin: 2em;
 }
-footer a:hover {
+footer a.facebook:hover {
   color: #1a75bc;
+}
+footer a.instagram:hover {
+  color: #d62976;
+}
+footer a.linkedin:hover {
+  color: #0077b5;
+}
+footer a.location:hover {
+  color: #940b0b;
 }
 
 .navbar {
   background-color: #dfe1e3;
-  padding: 0.8em;
+  padding: 0.5em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .navbar a {
   text-decoration: none;
@@ -46,4 +58,156 @@ footer a:hover {
 }
 .navbar a:hover {
   color: #1a75bc;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  margin: 0.5em;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  text-indent: 1em;
+  font-weight: 300;
+  color: #6e6f71;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 320px) {
+  p {
+    font-size: 0.7em;
+  }
+}
+
+.partenaires-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  padding: 2em;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media (max-width: 768px) {
+  .partenaires-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .partenaires-list {
+    grid-template-columns: 1fr;
+  }
+}
+.partenaires-list img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.partenaires-list img:hover {
+  transform: scale(1.05);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-mail {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+}
+.contact-mail p {
+  text-align: justify;
+  -moz-text-align-last: unset;
+       text-align-last: unset;
+  color: #000000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+input {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: none;
+  border-bottom: 2px solid #000000;
+  font-size: 1em;
+}
+input:hover {
+  border-bottom: 2px solid #1a75bc;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #1a75bc;
+}
+
+textarea {
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0.5em;
+  height: 10em;
+  resize: none;
+  font-size: 1em;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+textarea:hover {
+  border-bottom: 2px solid #1a75bc;
+}
+textarea:focus {
+  outline: none;
+  border: 2px solid #1a75bc;
+}
+
+button {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: none;
+  background-color: #000000;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #155a8a;
+}
+
+svg {
+  margin-right: 0.5em;
 }/*# sourceMappingURL=index.css.map */
