@@ -6,28 +6,66 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/", {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        client: e.target.client.value,
-        email: e.target.email.value,
-        phoneNumber: e.target.phoneNumber.value,
-        message: e.target.message.value,
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("E-mail envoyé avec succès !");
-        } else {
-          alert("Erreur lors de l'envoi de l'e-mail.");
-        }
-      })
-      .catch((error) => console.error("Erreur :", error));
+
+    const form = e.target;
+    const elements = form.elements;
+
+    const userName = elements.userName.value;
+    const email = elements.email.value;
+    const phoneNumber = elements.phoneNumber.value;
+    const message = elements.message.value;
+
+    if (!userName || !email || !message) {
+      alert("Veuillez remplir tous les champs obligatoires.");
+      return;
+    }
+    if (!/^[a-zA-Z\s]+$/.test(userName)) {
+      alert("Le nom ne doit contenir que des lettres et des espaces.");
+      return;
+    }
+    if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+      alert("Veuillez entrer une adresse e-mail valide.");
+      return;
+    }
+    if (phoneNumber && !/^\d{10}$/.test(phoneNumber)) {
+      alert("Le numéro de téléphone doit contenir 10 chiffres.");
+      return;
+    }
+    if (message.length < 10) {
+      alert("Le message doit contenir au moins 10 caractères.");
+      return;
+    }
+    if (message.length > 500) {
+      alert("Le message ne doit pas dépasser 500 caractères.");
+      return;
+    }
+
+    alert(
+      `Nom : ${userName}\nEmail : ${email}\nTéléphone : ${phoneNumber}\nMessage : ${message}`
+    );
+    form.reset();
+
+    //   try {
+    //     const response = await fetch("http://localhost:3000/", {
+    //       method: "POST",
+    //       mode: "no-cors",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(formData),
+    //     });
+
+    //     if (response.ok) {
+    //       console.log("Formulaire envoyé avec succès !");
+    //     } else {
+    //       console.error("Erreur lors de l'envoi");
+    //     }
+    //   } catch (error) {
+    //     console.error("Erreur réseau :", error);
+    //   }
+    //   form.reset();
   }
+
   return (
     <div className="contact">
       <div className="contact-info">
@@ -53,14 +91,14 @@ export default function Contact() {
             06 58 82 16 36
           </p>
 
-          <form onSubmit={handleSubmit} id="form">
-            <label htmlFor="client"></label>
+          <form action="/form" onSubmit={handleSubmit} method="GET">
+            <label htmlFor="userName"></label>
             <input
               type="text"
-              id="client"
-              name="client"
+              id="userName"
+              name="userName"
               placeholder="Nom"
-              required
+              // required
             />
 
             <label htmlFor="email"></label>
@@ -69,7 +107,7 @@ export default function Contact() {
               id="email"
               name="email"
               placeholder="Email"
-              required
+              // required
             />
 
             <label htmlFor="phoneNumber"></label>
@@ -78,15 +116,15 @@ export default function Contact() {
               id="phoneNumber"
               name="phoneNumber"
               placeholder="Téléphone"
-              required
+              // required
             />
 
             <label htmlFor="message"></label>
             <textarea
               id="message"
               name="message"
-              placeholder="Rédigez votre message ici..."
-              required
+              placeholder="Besoin d’informations ? Notre équipe est là pour vous aider."
+              // required
             ></textarea>
             <button type="submit">Envoyer</button>
           </form>

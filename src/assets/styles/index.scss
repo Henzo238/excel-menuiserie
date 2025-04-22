@@ -5,6 +5,9 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Raleway", sans-serif;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 #root {
@@ -14,6 +17,18 @@ body {
 }
 header {
   text-align: center;
+  padding: 2em;
+}
+.logo {
+  display: flex;
+  height: 3em;
+  padding: 0.5em;
+  justify-content: space-between;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 footer {
   margin-top: auto;
@@ -41,10 +56,10 @@ footer {
 }
 
 .navbar {
-  background-color: #dfe1e3;
   padding: 0.5em;
   text-align: center;
   font-size: 1.5em;
+  font-weight: 600;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -59,7 +74,6 @@ footer {
 }
 h1 {
   font-size: 2.5em;
-  margin: 0.5em;
   text-align: center;
 }
 h2 {
@@ -71,11 +85,7 @@ h2 {
 p {
   font-family: "Inter", sans-serif;
   font-size: 1em;
-  margin: 0.5em;
   line-height: 1.5;
-  text-align: justify;
-  text-justify: inter-word;
-  text-align-last: center;
   text-indent: 1em;
   font-weight: 300;
   color: #6e6f71;
@@ -87,6 +97,55 @@ p {
   }
   @media (max-width: 320px) {
     font-size: 0.7em;
+  }
+}
+
+// PAGE ACCUEIL
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  margin: 0 auto;
+  max-width: 1200px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  @media (max-width: 320px) {
+    flex-direction: column;
+  }
+  img {
+    // border: 2px solid #000000;
+    object-fit: contain;
+    width: auto;
+    height: 55vh;
+  }
+}
+.home-text {
+  h1 {
+    font-size: 3em;
+    text-align: left;
+    font-weight: 600;
+    color: #1a75bc;
+    margin-bottom: 1em;
+    // border: 2px solid #000000;
+  }
+  p {
+    // border: 2px solid #000000;
+    // height: 60vh;
+    width: 90%;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2em;
+    text-align: left;
+    text-indent: 0;
   }
 }
 
@@ -127,7 +186,7 @@ p {
   padding: 2em;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #1a75bc;
 }
 .contact-mail {
   display: flex;

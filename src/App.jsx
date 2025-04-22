@@ -8,7 +8,6 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Navbar />
       <AppRoutes />
       <Footer />
     </Router>
