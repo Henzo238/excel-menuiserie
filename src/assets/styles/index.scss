@@ -149,6 +149,38 @@ p {
   }
 }
 
+.btn-contact {
+  margin-top: 2em;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 1em;
+  box-shadow: inset #dfe1e3 -2px 3px 10px;
+  height: 3em;
+  width: 15em;
+  padding: 0 2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  span:first-child {
+    display: inline;
+  }
+  span:last-child {
+    display: none;
+  }
+}
+
+.btn-contact:hover {
+  background-color: #0056a3;
+  color: #fff;
+  span:first-child {
+    display: none;
+  }
+  span:last-child {
+    display: inline;
+  }
+}
+
 // PAGE PARTENAIRES
 .partenaires-list {
   display: grid;
@@ -234,7 +266,7 @@ textarea {
     border: 2px solid #1a75bc;
   }
 }
-button {
+.btn-form {
   padding: 0.5em;
   margin: 0.5em 0;
   border: none;
@@ -244,8 +276,10 @@ button {
   cursor: pointer;
   &:hover {
     background-color: #155a8a;
+    transition: ease-out 0.3s;
   }
 }
+
 svg {
   margin-right: 0.5em;
 }

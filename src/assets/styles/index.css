@@ -162,6 +162,38 @@ p {
   text-indent: 0;
 }
 
+.btn-contact {
+  margin-top: 2em;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 1em;
+  box-shadow: inset #dfe1e3 -2px 3px 10px;
+  height: 3em;
+  width: 15em;
+  padding: 0 2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-contact span:first-child {
+  display: inline;
+}
+.btn-contact span:last-child {
+  display: none;
+}
+
+.btn-contact:hover {
+  background-color: #0056a3;
+  color: #fff;
+}
+.btn-contact:hover span:first-child {
+  display: none;
+}
+.btn-contact:hover span:last-child {
+  display: inline;
+}
+
 .partenaires-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -255,7 +287,7 @@ textarea:focus {
   border: 2px solid #1a75bc;
 }
 
-button {
+.btn-form {
   padding: 0.5em;
   margin: 0.5em 0;
   border: none;
@@ -264,8 +296,9 @@ button {
   font-size: 1em;
   cursor: pointer;
 }
-button:hover {
+.btn-form:hover {
   background-color: #155a8a;
+  transition: ease-out 0.3s;
 }
 
 svg {

@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 // import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Header() {
@@ -11,11 +12,6 @@ export default function Header() {
           alt="Logo"
         />
 
-        {/* <img
-          src="/src/assets/img/logoem-text.jpg"
-          className="icon-txt"
-          alt="Logo-txt"
-        /> */}
         <Navbar />
       </div>
     </header>

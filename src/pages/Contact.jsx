@@ -126,7 +126,9 @@ export default function Contact() {
               placeholder="Besoin d’informations ? Notre équipe est là pour vous aider."
               // required
             ></textarea>
-            <button type="submit">Envoyer</button>
+            <button type="submit" className="btn-form">
+              Envoyer
+            </button>
           </form>
         </div>
       </div>
