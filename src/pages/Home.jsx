@@ -29,7 +29,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <img src="/src/assets/img/logoem.jpg" alt="" />
+        <img src="/public/img/logoem.jpg" alt="" />
       </div>
     </>
   );

@@ -6,11 +6,7 @@ export default function Header() {
     <header>
       <div className="logo">
         <Link to="/">
-          <img
-            src="/src/assets/img/logoem-icon.jpg"
-            className="icon"
-            alt="Logo"
-          />
+          <img src="/public/img/logoem-icon.jpg" className="icon" alt="Logo" />
         </Link>
 
         <Navbar />
