@@ -6,8 +6,12 @@ export default function Home() {
       <div className="home">
         <div className="home-text">
           <h1>
-            Fabrication, vente et installation de menuiseries PVC, ALU et BOIS
-            basée sur Lyon.
+            <ul className="list">
+              <li className="list-item">Fabrication</li>
+              <li className="list-item">Vente</li>
+              <li className="list-item">Installation</li>
+            </ul>
+            de menuiseries PVC, ALU et BOIS basée sur Lyon.
           </h1>
           <p>
             Nous vous offrons une large gamme de menuiseries PVC, ALU et BOIS de

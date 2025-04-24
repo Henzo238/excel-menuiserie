@@ -2,39 +2,38 @@ const partenaires = [
   {
     name: "Aluplast",
     logo: "/src/assets/img/partenaires/aluplast.avif",
-    description: "Description du partenaire 1",
+    site: "https://www.aluplast.net/fr/",
   },
   {
     name: "La Toulousaine",
     logo: "/src/assets/img/partenaires/La toulousaine.avif",
-    description: "Description du partenaire 2",
+    site: "https://www.la-toulousaine.com/fr/",
   },
   {
     name: "Somfy",
     logo: "/src/assets/img/partenaires/somfy.avif",
-    description: "Description du partenaire 3",
+    site: "https://www.somfy.fr/",
   },
   {
     name: "Saint-Gobain",
     logo: "/src/assets/img/partenaires/ST-GOBAIN_.avif",
-    description: "Description du partenaire 3",
+    site: "https://www.saint-gobain.com/fr",
   },
   {
     name: "Tordjman",
     logo: "/src/assets/img/partenaires/tordjman.avif",
-    description: "Description du partenaire 3",
+    site: "https://www.tordjmanmetal.fr/",
   },
   {
     name: "Wicona",
-    logo: "/src/assets/img/partenaires/wicona_edited.avif",
-    description: "Description du partenaire 3",
+    logo: "/src/assets/img/partenaires/wicona_edited.jpg",
+    site: "https://www.wicona.com/fr/fr/",
   },
 ];
 
 const Partenaires = () => {
   return (
     <div className="partenaires">
-      <h1>Nos partenaires</h1>
       <p>
         Année après année, Excel Menuiseries n'a cessé d’évoluer pour servir au
         mieux les besoins de ses clients. Nous sommes toujours fidèles à notre
@@ -44,8 +43,10 @@ const Partenaires = () => {
       </p>
       <div className="partenaires-list">
         {partenaires.map((partenaire) => (
-          <div key={partenaire.name} className="partenaire">
-            <img src={partenaire.logo} alt={partenaire.name} />
+          <div key={partenaire.name} className="partenaires-card">
+            <a href={partenaire.site} target="_blank" rel="noopener noreferrer">
+              <img src={partenaire.logo} alt={partenaire.name} />
+            </a>
             <h2>{partenaire.name}</h2>
             <p>{partenaire.description}</p>
           </div>

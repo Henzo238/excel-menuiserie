@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/">Accueil</Link>
-      <Link to="/realisations">Nos réalisations</Link>
-      <Link to="/partenaires">Nos partenaires</Link>
-      <Link to="/contact">Contact</Link>
+      <NavLink to="/">Accueil</NavLink>
+      <NavLink to="/realisations">Nos réalisations</NavLink>
+      <NavLink to="/partenaires">Nos partenaires</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
     </nav>
   );
 }
