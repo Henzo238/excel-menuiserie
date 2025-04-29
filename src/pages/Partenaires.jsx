@@ -1,32 +1,32 @@
 const partenaires = [
   {
     name: "Aluplast",
-    logo: "/public/img/partenaires/aluplast.avif",
+    logo: "/img/partenaires/aluplast.avif",
     site: "https://www.aluplast.net/fr/",
   },
   {
     name: "La Toulousaine",
-    logo: "/public/img/partenaires/La toulousaine.avif",
+    logo: "/img/partenaires/La toulousaine.avif",
     site: "https://www.la-toulousaine.com/fr/",
   },
   {
     name: "Somfy",
-    logo: "/public/img/partenaires/somfy.avif",
+    logo: "/img/partenaires/somfy.avif",
     site: "https://www.somfy.fr/",
   },
   {
     name: "Saint-Gobain",
-    logo: "/public/img/partenaires/ST-GOBAIN_.avif",
+    logo: "/img/partenaires/ST-GOBAIN_.avif",
     site: "https://www.saint-gobain.com/fr",
   },
   {
     name: "Tordjman",
-    logo: "/public/img/partenaires/tordjman.avif",
+    logo: "/img/partenaires/tordjman.avif",
     site: "https://www.tordjmanmetal.fr/",
   },
   {
     name: "Wicona",
-    logo: "/public/img/partenaires/wicona_edited.jpg",
+    logo: " /img/partenaires/wicona_edited.jpg",
     site: "https://www.wicona.com/fr/fr/",
   },
 ];
